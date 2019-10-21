@@ -26,6 +26,13 @@
         <h2>Will not display</h2>
     </c:if>
 
+    <c:if test="${url<1}">
+        <c:redirect url="http://javatpoint.com"/>
+    </c:if>
+    <c:otherwise>
+        <p>none of the above tests were true</p>
+    </c:otherwise>
+
     <ol>
         <c:forEach var="favFood" items="${favFoods}">
             <li>${favFood}</li>

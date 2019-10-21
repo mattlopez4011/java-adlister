@@ -1,6 +1,36 @@
 h1{
-    background: yellow;
+    /*background: yellow;*/
 }
-nav{
-    background: blue;
+
+
+.container{
+    /*margin: auto auto;*/
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 325px;
+    height: 275px;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background: black;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.right-line{
+    border-right: 3px solid gray;
+    height: 85%;
+    margin: auto 15px;
 }
