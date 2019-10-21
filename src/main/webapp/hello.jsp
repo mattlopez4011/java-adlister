@@ -31,12 +31,19 @@
 <p>"username" parameter: <%= request.getParameter("username") %></p>
 <p>"password" parameter: <%= request.getParameter("password") %></p>
 
-<form action="/hello.jsp" method="post">
-    <label for="username">Enter username:</label>
+<form action="/displayName.jsp" method="post">
+<%--    Name--%>
+    <label for="name">Enter Name:</label>
+    <input id="name" type="text" name="name" placeholder="name">
+    <br>
+<%--    username--%>
+    <label for="username">Enter Username:</label>
     <input id="username" type="text" name="username" placeholder="username">
     <br>
+<%--    password--%>
     <label for="password">Enter Password:</label>
-    <input id="password" name="password" placeholder="password">
+    <input id="password" type="password" name="password" placeholder="password">
+    <br>
     <input type="submit">
 </form>
 
