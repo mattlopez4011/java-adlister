@@ -23,8 +23,6 @@ public class CountServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-
-
         if(count == null){
 
             counter++;
