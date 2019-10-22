@@ -9,16 +9,23 @@ import java.io.PrintWriter;
 @WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String name = request.getParameter("name");
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
         if (name == null){
             out.println("<h1>Hello World!</h1>" + "<img src=\"https://media.giphy.com/media/lcs5BL0NIM4WMv61a9/giphy.gif\">");
-        }else {
+        }else if (name.equals("google")){
+            response.sendRedirect("https://google.com");
+        }
+        else {
             out.println("<h1>Hello, "+name+"</h1>");
         }
+
+        request.setAttribute("name", name);
+        request.getRequestDispatcher("/hello.jsp").forward(request, response);
+
 
     }
 
