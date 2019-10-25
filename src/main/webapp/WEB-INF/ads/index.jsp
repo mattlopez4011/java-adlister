@@ -14,7 +14,10 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-            <h2>${ad.title}</h2>
+<%--            <h5>User id: ${ad.id}</h5>--%>
+            <h5>User id: ${ad.user_id}</h5>
+<%--            <h2>${ad.title}</h2>--%>
+            <h2> <c:out value="${ad.title}"/> </h2>
             <p>${ad.description}</p>
         </div>
     </c:forEach>
